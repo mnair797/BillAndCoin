@@ -14,13 +14,54 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starting_background-2" translatesAutoresizingMaskIntoConstraints="NO" id="z0x-mV-wlf">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zvt-wc-Arn">
+                                <rect key="frame" x="88.5" y="44" width="237" height="742"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cDy-KI-vh5">
+                                        <rect key="frame" x="0.0" y="0.0" width="237" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="375" id="ank-LY-EHu"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Welcome!">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="46"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="billorcoin" translatesAutoresizingMaskIntoConstraints="NO" id="yeJ-Kv-zeJ">
+                                        <rect key="frame" x="0.0" y="375" width="237" height="367"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zvt-wc-Arn" secondAttribute="bottom" constant="76" id="EBM-c6-BWv"/>
+                            <constraint firstItem="Zvt-wc-Arn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88.700000000000003" id="Fz0-fG-i51"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zvt-wc-Arn" secondAttribute="trailing" constant="88.700000000000003" id="LxC-c9-xWZ"/>
+                            <constraint firstItem="z0x-mV-wlf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="M2x-Lz-Jag"/>
+                            <constraint firstAttribute="trailing" secondItem="z0x-mV-wlf" secondAttribute="trailing" id="Myk-Gn-iQH"/>
+                            <constraint firstItem="z0x-mV-wlf" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="YjH-Na-wti"/>
+                            <constraint firstItem="Zvt-wc-Arn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cjO-xC-mNt"/>
+                            <constraint firstItem="z0x-mV-wlf" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="gGT-S8-p3b"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="billorcoin" width="88.5" height="63"/>
+        <image name="starting_background-2" width="188" height="334"/>
+    </resources>
 </document>
