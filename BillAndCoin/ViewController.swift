@@ -12,7 +12,7 @@ import Speech
 import Alamofire
 import SwiftyJSON
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var takephoto: UIButton!
     
@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         //vc.sourceType = .camera
         vc.sourceType = .photoLibrary
         vc.allowsEditing = true
+        vc.delegate = self
         present(vc, animated: true)
 
     }
