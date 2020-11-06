@@ -25,6 +25,9 @@
                                 <state key="normal" title="Take Photo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="takephotopressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctj-dV-I8d"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-Ag-cCn">
                                 <rect key="frame" x="212" y="0.0" width="202" height="479"/>
@@ -36,6 +39,9 @@
                                 <state key="normal" title="Pick Image">
                                     <color key="titleColor" red="0.0" green="0.24025789174373735" blue="0.89967211787564771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickimagepressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jS5-oq-dQm"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Z5-6gv">
                                 <rect key="frame" x="-8" y="474" width="222" height="422"/>
@@ -80,6 +86,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="audiototext" destination="NfZ-Oe-lTS" id="pEK-9g-rt7"/>
+                        <outlet property="instructions" destination="Ttx-sv-Cc0" id="MJw-dU-Qeb"/>
+                        <outlet property="pickimage" destination="BA5-S5-R7d" id="g6Q-t3-T0J"/>
+                        <outlet property="takephoto" destination="pD6-Sg-1o9" id="ou2-yL-3Qd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
