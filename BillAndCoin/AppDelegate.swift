@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        do {
+          let s=3
+          print("Starting sleep",s)
+          let utterance = AVSpeechUtterance(string: "Welcome!")
+          utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+          utterance.rate = 0.5
+
+          let synthesizer = AVSpeechSynthesizer()
+          synthesizer.speak(utterance)
+          sleep(UInt32(s))
+          print("Finished sleep for ",s)
+            
+          }
         return true
     }
 
