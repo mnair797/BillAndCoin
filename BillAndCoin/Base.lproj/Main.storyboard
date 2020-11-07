@@ -53,17 +53,23 @@
                                 <state key="normal" title="Audio To Text">
                                     <color key="titleColor" red="0.57170470849045807" green="0.18357677100147429" blue="0.67632772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="AudiotoTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ege-FG-aWy"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-fB-DgS">
                                 <rect key="frame" x="212" y="475" width="202" height="421"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
-                                <rect key="frame" x="189" y="630" width="225" height="48"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
-                                <state key="normal" title="Instructions">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
+                                <rect key="frame" x="222" y="556" width="192" height="201"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
+                                <state key="normal" title="Repeat Instructions">
                                     <color key="titleColor" red="0.16846802070747058" green="0.52076586787564771" blue="0.10497737020848528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="repeatinstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zc-4J-ki3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
