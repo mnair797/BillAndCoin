@@ -64,7 +64,15 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         present(vc, animated: true)
 
     }
-    
+    func say(string: String) {
+        let utterance = AVSpeechUtterance(string: string)
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.5
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
       let utterance = AVSpeechUtterance(string: "Hello! Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
@@ -106,12 +114,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
                        let predictedValue = myJson["predicted_label"].string
                        print("Saw predicted value \(String(describing: predictedValue))")
                        let predictionMessage = predictedValue!
-                        let utterance = AVSpeechUtterance(string: "Hello")
-                        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-                        utterance.rate = 0.5
-
-                        let synthesizer = AVSpeechSynthesizer()
-                        synthesizer.speak(utterance)
+                       self.say(string: predictionMessage)
                    case .failure(let error):
                        print("\n\n Request failed with error: \(error)")
                   
