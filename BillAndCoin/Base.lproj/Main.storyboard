@@ -15,80 +15,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="red_background-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-ju-uOr">
-                                <rect key="frame" x="-8" y="0.0" width="222" height="479"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-Sg-1o9">
-                                <rect key="frame" x="0.0" y="0.0" width="225" height="493"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Take Photo">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="takephotopressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctj-dV-I8d"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-Ag-cCn">
-                                <rect key="frame" x="212" y="0.0" width="202" height="479"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA5-S5-R7d">
-                                <rect key="frame" x="189" y="19" width="225" height="460"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Pick Image">
-                                    <color key="titleColor" red="0.0" green="0.24025789174373735" blue="0.89967211787564771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickimagepressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jS5-oq-dQm"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Z5-6gv">
-                                <rect key="frame" x="-8" y="474" width="222" height="422"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-Oe-lTS">
-                                <rect key="frame" x="0.0" y="424" width="225" height="460"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Audio To Text">
-                                    <color key="titleColor" red="0.57170470849045807" green="0.18357677100147429" blue="0.67632772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="AudiotoTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ege-FG-aWy"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-fB-DgS">
-                                <rect key="frame" x="212" y="475" width="202" height="421"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
-                                <rect key="frame" x="222" y="556" width="192" height="201"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="22"/>
-                                <state key="normal" title="Repeat Instructions">
-                                    <color key="titleColor" red="0.16846802070747058" green="0.52076586787564771" blue="0.10497737020848528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="repeatinstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zc-4J-ki3"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="00y-pz-3G0">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" image="red_background-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-ju-uOr">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="400" id="chY-vN-BaL"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-Sg-1o9">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                        <state key="normal" title="Take Photo">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="takephotopressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctj-dV-I8d"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-Ag-cCn">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="0.0"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA5-S5-R7d">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <state key="normal" title="Pick Image">
+                                            <color key="titleColor" red="0.0" green="0.24025789174373735" blue="0.89967211787564771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="pickimagepressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jS5-oq-dQm"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Z5-6gv">
+                                        <rect key="frame" x="0.0" y="400" width="414" height="64.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-Oe-lTS">
+                                        <rect key="frame" x="0.0" y="464.5" width="414" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="Message from Creator">
+                                            <color key="titleColor" red="0.57170470849045807" green="0.18357677100147429" blue="0.67632772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="AudiotoTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ege-FG-aWy"/>
+                                        </connections>
+                                    </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-fB-DgS">
+                                        <rect key="frame" x="0.0" y="502.5" width="414" height="355.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
+                                        <rect key="frame" x="0.0" y="858" width="414" height="38"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
+                                        <state key="normal" title="Repeat Instructions">
+                                            <color key="titleColor" red="0.16846802070747058" green="0.52076586787564771" blue="0.10497737020848528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="repeatinstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zc-4J-ki3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pD6-Sg-1o9" firstAttribute="leading" secondItem="NfZ-Oe-lTS" secondAttribute="leading" id="56L-d2-dnX"/>
-                            <constraint firstItem="pD6-Sg-1o9" firstAttribute="trailing" secondItem="NfZ-Oe-lTS" secondAttribute="trailing" id="5t3-lW-5nW"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="NfZ-Oe-lTS" secondAttribute="bottom" constant="-22" id="8WP-AV-bn4"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="E3j-uN-Hpe"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="189" id="Ku0-fx-HCU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pD6-Sg-1o9" secondAttribute="trailing" constant="189" id="Kum-t0-inj"/>
-                            <constraint firstItem="pD6-Sg-1o9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="Ns5-LQ-JHW"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="leading" secondItem="Ttx-sv-Cc0" secondAttribute="leading" id="R4b-Qd-YIU"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="trailing" secondItem="Ttx-sv-Cc0" secondAttribute="trailing" id="U9V-IZ-xmh"/>
-                            <constraint firstItem="NfZ-Oe-lTS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="380" id="VXb-8B-nI9"/>
-                            <constraint firstItem="pD6-Sg-1o9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="b8j-K7-NdO"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="bottom" secondItem="pD6-Sg-1o9" secondAttribute="bottom" id="t3b-K7-cgJ"/>
-                            <constraint firstItem="NfZ-Oe-lTS" firstAttribute="baseline" secondItem="Ttx-sv-Cc0" secondAttribute="firstBaseline" id="tbh-ZH-J8R"/>
-                            <constraint firstItem="BA5-S5-R7d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-25" id="typ-Fn-nA5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BA5-S5-R7d" secondAttribute="bottom" constant="383" id="wNr-ww-GF8"/>
+                            <constraint firstAttribute="bottom" secondItem="00y-pz-3G0" secondAttribute="bottom" id="7k7-1a-ZYf"/>
+                            <constraint firstItem="00y-pz-3G0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="H2Z-Ba-b67"/>
+                            <constraint firstItem="00y-pz-3G0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="RKh-Dq-LjG"/>
+                            <constraint firstAttribute="trailing" secondItem="00y-pz-3G0" secondAttribute="trailing" id="UVa-bi-Bt8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

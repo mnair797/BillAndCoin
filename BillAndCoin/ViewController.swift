@@ -26,10 +26,16 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         
     }
     @IBAction func AudiotoTextButton(_ sender: Any) {
-        
+        let utterance = AVSpeechUtterance(string: "Thank you for using my app! I am not liable for any incorrect bill or coin values predicted. I hope this app helps you!")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.5
+
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
+    
     @IBAction func repeatinstructions(_ sender: Any) {
-        let utterance = AVSpeechUtterance(string: "Hello! Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
+        let utterance = AVSpeechUtterance(string: "Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.5
 
@@ -60,7 +66,13 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     }
     
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+      let utterance = AVSpeechUtterance(string: "Hello! Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
+      utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+      utterance.rate = 0.5
+      let synthesizer = AVSpeechSynthesizer()
+      synthesizer.speak(utterance)
+    }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             picker.dismiss(animated: true)
 
