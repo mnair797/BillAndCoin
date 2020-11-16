@@ -16,21 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="00y-pz-3G0">
-                                <rect key="frame" x="0.0" y="0.0" width="814" height="762"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Untitled design" translatesAutoresizingMaskIntoConstraints="NO" id="RK6-qh-ish">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="00y-pz-3G0" userLabel="Parent Stack">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Fz-1K-N5H">
-                                        <rect key="frame" x="0.0" y="0.0" width="814" height="400"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="GdP-gB-wZQ" userLabel="Top Stack">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="409"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="747" image="red_background-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z5f-ju-uOr">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="400"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="400" id="chY-vN-BaL"/>
-                                                    <constraint firstAttribute="width" constant="240" id="y5Y-e6-34d"/>
-                                                </constraints>
-                                            </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="747" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pD6-Sg-1o9">
-                                                <rect key="frame" x="240" y="0.0" width="170" height="400"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="409"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                                 <state key="normal" title="Take Photo">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,14 +35,8 @@
                                                     <action selector="takephotopressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ctj-dV-I8d"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="748" verticalCompressionResistancePriority="748" image="blue_background" translatesAutoresizingMaskIntoConstraints="NO" id="Sh5-Ag-cCn">
-                                                <rect key="frame" x="410" y="0.0" width="240" height="400"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="240" id="7mk-3v-0RA"/>
-                                                </constraints>
-                                            </imageView>
-                                            <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA5-S5-R7d">
-                                                <rect key="frame" x="650" y="0.0" width="164" height="400"/>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA5-S5-R7d">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="409"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                                 <state key="normal" title="Pick Image">
                                                     <color key="titleColor" red="0.0" green="0.24025789174373735" blue="0.89967211787564771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -57,40 +47,44 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="747" image="purple_background" translatesAutoresizingMaskIntoConstraints="NO" id="yQn-Z5-6gv">
-                                        <rect key="frame" x="0.0" y="400" width="814" height="0.0"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-Oe-lTS">
-                                        <rect key="frame" x="0.0" y="400" width="814" height="0.0"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="Message from Creator">
-                                            <color key="titleColor" red="0.57170470849045807" green="0.18357677100147429" blue="0.67632772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="AudiotoTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ege-FG-aWy"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="green_background" translatesAutoresizingMaskIntoConstraints="NO" id="zwL-fB-DgS">
-                                        <rect key="frame" x="0.0" y="400" width="814" height="324"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
-                                        <rect key="frame" x="0.0" y="724" width="814" height="38"/>
-                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
-                                        <state key="normal" title="Repeat Instructions">
-                                            <color key="titleColor" red="0.16846802070747058" green="0.52076586787564771" blue="0.10497737020848528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="repeatinstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zc-4J-ki3"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="FNB-1d-Kti" userLabel="Bottom Stack">
+                                        <rect key="frame" x="0.0" y="409" width="374" height="409"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ttx-sv-Cc0">
+                                                <rect key="frame" x="0.0" y="0.0" width="187" height="409"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="32"/>
+                                                <state key="normal" title="Instructions">
+                                                    <color key="titleColor" red="0.16846802070747058" green="0.52076586787564771" blue="0.10497737020848528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="repeatinstructions:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Zc-4J-ki3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="748" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NfZ-Oe-lTS">
+                                                <rect key="frame" x="187" y="0.0" width="187" height="409"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                                <state key="normal" title="Warning">
+                                                    <color key="titleColor" red="0.57170470849045807" green="0.18357677100147429" blue="0.67632772020725396" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="AudiotoTextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ege-FG-aWy"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="00y-pz-3G0" secondAttribute="bottom" constant="100" id="LDz-mj-P4Q"/>
-                            <constraint firstItem="00y-pz-3G0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NeY-WO-6zJ"/>
-                            <constraint firstItem="00y-pz-3G0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zCM-m7-V3R"/>
+                            <constraint firstItem="00y-pz-3G0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="EKq-5p-Ji5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="00y-pz-3G0" secondAttribute="trailing" id="Ux6-1y-Kqt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="00y-pz-3G0" secondAttribute="bottom" id="Vv4-hT-VjO"/>
+                            <constraint firstItem="00y-pz-3G0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Y1O-bn-BZd"/>
+                            <constraint firstItem="RK6-qh-ish" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iWy-rb-Dnd"/>
+                            <constraint firstAttribute="bottom" secondItem="RK6-qh-ish" secondAttribute="bottom" id="oLi-aX-MLc"/>
+                            <constraint firstAttribute="trailing" secondItem="RK6-qh-ish" secondAttribute="trailing" id="oyZ-W8-XZI"/>
+                            <constraint firstItem="RK6-qh-ish" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qi7-Rk-lVd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -107,9 +101,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blue_background" width="56" height="100"/>
-        <image name="green_background" width="200" height="355.5"/>
-        <image name="purple_background" width="375" height="812"/>
-        <image name="red_background-1" width="266.5" height="400"/>
+        <image name="Untitled design" width="360" height="640"/>
     </resources>
 </document>

@@ -28,16 +28,16 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
     @IBAction func AudiotoTextButton(_ sender: Any) {
         let utterance = AVSpeechUtterance(string: "Thank you for using my app! I am not liable for any incorrect bill or coin values predicted. I hope this app helps you!")
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.5
+        utterance.rate = 0.45
 
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
     }
     
     @IBAction func repeatinstructions(_ sender: Any) {
-        let utterance = AVSpeechUtterance(string: "Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
+        let utterance = AVSpeechUtterance(string: "Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to hear the disclaimer and message from creator, click the bottom right. To repeat the instruction, click the bottom left.")
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.5
+        utterance.rate = 0.45
 
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterance)
@@ -75,11 +75,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
 
     
     override func viewWillAppear(_ animated: Bool) {
-      let utterance = AVSpeechUtterance(string: "Hello! Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to say what you want, click the bottom left. To repeat the instruction, click the bottom right.")
-      utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-      utterance.rate = 0.5
-      let synthesizer = AVSpeechSynthesizer()
-      synthesizer.speak(utterance)
+      
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
             picker.dismiss(animated: true)
@@ -130,9 +126,29 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        takephoto.setTitle("Take\nImage", for: .normal)
+        takephoto.titleLabel?.lineBreakMode = .byWordWrapping
+        takephoto.titleLabel?.textAlignment = .center
+        
+        pickimage.setTitle("Pick\nImage", for: .normal)
+        pickimage.titleLabel?.lineBreakMode = .byWordWrapping
+        pickimage.titleLabel?.textAlignment = .center
+        
+        instructions.setTitle("Directions", for: .normal)
+        instructions.titleLabel?.lineBreakMode = .byWordWrapping
+        instructions.titleLabel?.textAlignment = .center
+        
+        audiototext.setTitle("Disclaimer", for: .normal)
+        audiototext.titleLabel?.lineBreakMode = .byWordWrapping
+        audiototext.titleLabel?.textAlignment = .center
+        
+        let utterance = AVSpeechUtterance(string: "Please click the top left to take an image. If you would like to pick an image, click the top right. If you would like to hear the disclaimer and message from creator, click the bottom right. To repeat the instruction, click the bottom left.")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        utterance.rate = 0.45
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
         // Do any additional setup after loading the view.
     }
 
 
 }
-
